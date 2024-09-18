@@ -1,0 +1,277 @@
+diff --git a/.gitattributes b/.gitattributes
+index 80a5adc..3e3cdc7 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -4,5 +4,3 @@
+ .gitignore export-ignore
+ .husky/** export-ignore
+ .imgbotconfig export-ignore
+-
+-.yarn/** linguist-vendored
+diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
+index 6a69989..d10fb98 100644
+--- a/.github/workflows/push.yml
++++ b/.github/workflows/push.yml
+@@ -21,19 +21,19 @@ jobs:
+         uses: actions/setup-node@v4
+         with:
+           node-version: ${{ matrix.node-version }}
+-      - name: Enable the corepack because of the Yarn berry
++      - name: Enable the corepack
+         run: corepack enable
+       - name: Post-prepare the Node.js version ${{ matrix.node-version }} environment
+         uses: actions/setup-node@v4
+         with:
+-          cache: ${{ !env.ACT && 'yarn' || '' }}
++          cache: ${{ !env.ACT && 'npm' || '' }}
+           node-version: ${{ matrix.node-version }}
+       - env:
+           HUSKY: 0
+         name: Install the dependencies
+-        run: yarn install --inline-builds
++        run: npm ci
+       - name: Run the tests
+-        run: yarn run test
++        run: npm run test
+     strategy:
+       matrix:
+         node-version:
+diff --git a/.gitignore b/.gitignore
+index 776979a..eacfb31 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,5 +1,5 @@
+-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
+-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
++# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
++# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
+ 
+ ### Linux ###
+ *~
+@@ -291,21 +291,4 @@ $RECYCLE.BIN/
+ # Windows shortcuts
+ *.lnk
+ 
+-### yarn ###
+-# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+-
+-.yarn/*
+-!.yarn/releases
+-!.yarn/patches
+-!.yarn/plugins
+-!.yarn/sdks
+-!.yarn/versions
+-
+-# if you are NOT using Zero-installs, then:
+-# comment the following lines
+-# !.yarn/cache
+-
+-# and uncomment the following lines
+-.pnp.*
+-
+-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
++# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
+diff --git a/.husky/commit-msg b/.husky/commit-msg
+index a6cc5a5..319c40f 100755
+--- a/.husky/commit-msg
++++ b/.husky/commit-msg
+@@ -2,4 +2,4 @@
+ # -*- mode: sh -*-
+ # vim: set ft=sh :
+ 
+-yarn exec commitlint --edit "${1}"
++npm x --no -- commitlint --edit "${1}"
+diff --git a/.husky/pre-commit b/.husky/pre-commit
+index e244340..869ac2a 100755
+--- a/.husky/pre-commit
++++ b/.husky/pre-commit
+@@ -2,4 +2,4 @@
+ # -*- mode: sh -*-
+ # vim: set ft=sh :
+ 
+-yarn exec lint-staged
++npm x --no -- lint-staged
+diff --git a/.prettierignore b/.prettierignore
+index 0c9806f..8f8d70b 100644
+--- a/.prettierignore
++++ b/.prettierignore
+@@ -6,7 +6,3 @@
+ 
+ # Ignorefiles
+ .*ignore
+-
+-# Yarn v2
+-.yarn
+-yarn.lock
+diff --git a/.vim/coc-settings.json b/.vim/coc-settings.json
+index 0e775e9..78facd1 100644
+--- a/.vim/coc-settings.json
++++ b/.vim/coc-settings.json
+@@ -1,6 +1,3 @@
+ {
+-  "eslint.nodePath": ".yarn/sdks",
+-  "eslint.packageManager": "yarn",
+-  "tsserver.tsdk": ".yarn/sdks/typescript/lib",
+   "workspace.workspaceFolderCheckCwd": false
+ }
+diff --git a/.vscode/extensions.json b/.vscode/extensions.json
+index 88b4015..ecd73ea 100644
+--- a/.vscode/extensions.json
++++ b/.vscode/extensions.json
+@@ -1,6 +1,5 @@
+ {
+   "recommendations": [
+-    "arcanis.vscode-zipfs",
+     "davidanson.vscode-markdownlint",
+     "dbaeumer.vscode-eslint",
+     "editorconfig.editorconfig",
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+index 8f37f7e..071fae9 100644
+--- a/.vscode/settings.json
++++ b/.vscode/settings.json
+@@ -1,5 +1,4 @@
+ {
+-  "eslint.nodePath": ".yarn/sdks",
+   "explorer.fileNesting.enabled": true,
+   "explorer.fileNesting.expand": false,
+   "explorer.fileNesting.patterns": {
+@@ -7,33 +6,24 @@
+     ".gitattributes": ".gitignore",
+     ".markdownlint.*": ".markdownlint-cli2.*",
+     ".tool-versions": ".node-version, .nvmrc",
+-    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
++    "package.json": ".npmrc, package-lock.json"
+   },
+   "files.associations": {
+     ".imgbotconfig": "json",
+     "LICENSE": "plaintext"
+   },
+   "files.readonlyInclude": {
+-    "**/.pnp.*": true,
+-    "**/.yarn/**/*": true,
+     "**/node_modules/**/*": true
+   },
+   "files.watcherExclude": {
+     "**/.eslintcache": true,
+-    "**/.pnp.*": true,
+-    "**/.yarn/cache/**": true,
+-    "**/.yarn/unplugged/**": true,
+     "**/node_modules/**/*": true
+   },
+   "git.branchProtection": ["main"],
+-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+   "search.exclude": {
+-    "**/.pnp.*": true,
+-    "**/.yarn": true,
+     "**/node_modules/**/*": true
+   },
+   "typescript.enablePromptUseWorkspaceTsdk": true,
+-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+   "yaml.schemas": {
+     "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
+       ".coderabbit.yaml"
+diff --git a/README.md b/README.md
+index 3bd776b..a486a18 100644
+--- a/README.md
++++ b/README.md
+@@ -1,8 +1,7 @@
+-# 📄 Yarn project boilerplate
++# 📄 Node project boilerplate
+ 
+ ## Features
+ 
+-- Yarn (berry) with PnP
+ - TypeScript
+ - ESLint
+ - Prettier
+@@ -24,28 +23,28 @@
+ 
+ ```sh
+ corepack enable
+-yarn install
++npm install
+ ```
+ 
+ ## Linting
+ 
+ ```sh
+-yarn run lint
+-yarn run lint:fix # Lint and auto-fix
++npm run lint
++npm run lint:fix # Lint and auto-fix
+ ```
+ 
+ ## Testing
+ 
+ ```sh
+-yarn run test
++npm run test
+ ```
+ 
+-Currently, the command works as an alias for the `yarn run lint` command.
++Currently, the command works as an alias for the `npm run lint` command.
+ 
+ ## Cleaning
+ 
+ ```sh
+-yarn run clean
++npm run clean
+ ```
+ 
+ ## Migrate to NPM
+diff --git a/package.json b/package.json
+index b658f64..65bfba7 100644
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+   "name": "@kurone-kito/yarn-project-boilerplate",
+   "version": "0.1.0",
+   "private": true,
+-  "description": "The boilerplate project of the Node.js / Yarn",
++  "description": "The boilerplate project of the Node.js",
+   "keywords": [
+     "boilerplate",
+     "template"
+@@ -16,20 +16,20 @@
+   "files": [],
+   "scripts": {
+     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" node_modules/.cache",
+-    "lint": "conc -m 1 \"yarn:lint:*:check\"",
++    "lint": "conc -m 1 \"npm:lint:*:check\"",
+     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
+     "lint:eslint:check": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy=content -f codeframe \"./**/*\"",
+-    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
+-    "lint:fix": "conc -m 1 \"yarn:lint:cspell:check\" \"yarn:lint:*:fix\"",
++    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
++    "lint:fix": "conc -m 1 \"npm:lint:cspell:check\" \"npm:lint:*:fix\"",
+     "lint:markdown:check": "markdownlint-cli2 \"**/*.md\"",
+     "lint:markdown:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+     "lint:oxlint:check": "oxlint",
+     "lint:oxlint:fix": "oxlint --fix",
+-    "lint:prettier:check": "yarn run prettier -cu",
+-    "lint:prettier:fix": "yarn run prettier -uw",
++    "lint:prettier:check": "npm run prettier -- -cu",
++    "lint:prettier:fix": "npm run prettier -- -uw",
+     "postinstall": "husky",
+     "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
+-    "test": "yarn run lint"
++    "test": "npm run lint"
+   },
+   "prettier": "@kurone-kito/prettier-config",
+   "devDependencies": {
+@@ -43,7 +43,6 @@
+     "@kurone-kito/prettier-config": "^0.16.1",
+     "@kurone-kito/typescript-config": "^0.16.1",
+     "@typescript-eslint/parser": "^8.6.0",
+-    "@yarnpkg/sdks": "^3.2.0",
+     "concurrently": "^9.0.1",
+     "cspell": "^8.14.4",
+     "eslint": "^9.10.0",
+@@ -57,7 +56,6 @@
+     "typescript": "~5.6.2",
+     "typescript-eslint-language-service": "^5.0.5"
+   },
+-  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39",
+   "engines": {
+     "node": "^18.20 || ^20.10 || >=22"
+   },

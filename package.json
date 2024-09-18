@@ -1,0 +1,67 @@
+{
+  "name": "@kurone-kito/yarn-project-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The boilerplate project of the Node.js / Yarn",
+  "keywords": [
+    "boilerplate",
+    "template"
+  ],
+  "homepage": "https://github.com/kurone-kito/yarn-project-boilerplate#readme",
+  "bugs": "https://github.com/kurone-kito/yarn-project-boilerplate/issues",
+  "repository": "github:kurone-kito/yarn-project-boilerplate",
+  "license": "MIT",
+  "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+  "type": "module",
+  "files": [],
+  "scripts": {
+    "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" node_modules/.cache",
+    "lint": "conc -m 1 \"yarn:lint:*:check\"",
+    "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
+    "lint:eslint:check": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy=content -f codeframe \"./**/*\"",
+    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
+    "lint:fix": "conc -m 1 \"yarn:lint:cspell:check\" \"yarn:lint:*:fix\"",
+    "lint:markdown:check": "markdownlint-cli2 \"**/*.md\"",
+    "lint:markdown:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "lint:oxlint:check": "oxlint",
+    "lint:oxlint:fix": "oxlint --fix",
+    "lint:prettier:check": "yarn run prettier -cu",
+    "lint:prettier:fix": "yarn run prettier -uw",
+    "postinstall": "husky",
+    "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
+    "test": "yarn run lint"
+  },
+  "prettier": "@kurone-kito/prettier-config",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@cspell/cspell-types": "^8.14.4",
+    "@kurone-kito/commitlint-config": "^0.16.1",
+    "@kurone-kito/cspell-config": "^0.16.1",
+    "@kurone-kito/eslint-config-base": "^0.16.1",
+    "@kurone-kito/lint-staged-config": "^0.16.1",
+    "@kurone-kito/prettier-config": "^0.16.1",
+    "@kurone-kito/typescript-config": "^0.16.1",
+    "@typescript-eslint/parser": "^8.6.0",
+    "@yarnpkg/sdks": "^3.2.0",
+    "concurrently": "^9.0.1",
+    "cspell": "^8.14.4",
+    "eslint": "^9.10.0",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "markdownlint-cli2": "^0.14.0",
+    "oxlint": "^0.9.6",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "typescript": "~5.6.2",
+    "typescript-eslint-language-service": "^5.0.5"
+  },
+  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39",
+  "engines": {
+    "node": "^18.20 || ^20.10 || >=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
