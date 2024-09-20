@@ -6,7 +6,8 @@
     ".gitattributes": ".gitignore",
     ".markdownlint.*": ".markdownlint-cli2.*",
     ".tool-versions": ".node-version, .nvmrc",
-    "package.json": ".npmrc, pnpm-lock.yaml"
+    "package.json": ".npmrc, pnpm-lock.yaml",
+    "prettier.config.*": ".prettierignore"
   },
   "files.associations": {
     ".imgbotconfig": "json",
