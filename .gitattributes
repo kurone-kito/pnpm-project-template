@@ -4,5 +4,3 @@
 .gitignore export-ignore
 .husky/** export-ignore
 .imgbotconfig export-ignore
-
-.yarn/** linguist-vendored

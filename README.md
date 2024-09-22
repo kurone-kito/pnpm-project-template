@@ -1,8 +1,8 @@
-# 📄 Yarn project boilerplate
+# 📄 PNPM project template
 
 ## Features
 
-- Yarn (berry) with PnP
+- PNPM
 - TypeScript
 - ESLint
 - Prettier
@@ -24,48 +24,28 @@
 
 ```sh
 corepack enable
-yarn install
+pnpm install
 ```
 
 ## Linting
 
 ```sh
-yarn run lint
-yarn run lint:fix # Lint and auto-fix
+pnpm run lint
+pnpm run lint:fix # Lint and auto-fix
 ```
 
 ## Testing
 
 ```sh
-yarn run test
+pnpm run test
 ```
 
-Currently, the command works as an alias for the `yarn run lint` command.
+Currently, the command works as an alias for the `pnpm run lint` command.
 
 ## Cleaning
 
 ```sh
-yarn run clean
-```
-
-## Migrate to NPM
-
-```sh
-# 1. Remove all untracked files
-git clean -fdx
-
-# 2. Patch to the project
-patch -p1 < patches/migrate-to-npm.patch
-
-# 3. Remove some files
-npm x -y -- rimraf .yarn .yarnrc.yml yarn.lock
-
-# 4. Install the dependencies
-npm install
-
-# (Optional) 5. Commit the changes
-git add -A
-git commit -m 'chore: migrate to NPM'
+pnpm run clean
 ```
 
 ## Rules for Development
