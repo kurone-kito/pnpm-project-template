@@ -43,7 +43,7 @@
     "@kurone-kito/typescript-config": "^0.16.1",
     "@typescript-eslint/parser": "^8.6.0",
     "cspell": "^8.14.4",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-formatter-codeframe": "^7.32.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
