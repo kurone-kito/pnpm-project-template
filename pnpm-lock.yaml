@@ -15,8 +15,8 @@ importers:
         specifier: ^19.5.0
         version: 19.5.0
       '@cspell/cspell-types':
-        specifier: ^8.14.4
-        version: 8.14.4
+        specifier: ^8.15.5
+        version: 8.15.5
       '@kurone-kito/commitlint-config':
         specifier: ^0.16.1
         version: 0.16.1(@commitlint/config-conventional@19.5.0)
@@ -189,6 +189,10 @@ packages:
 
   '@cspell/cspell-types@8.14.4':
     resolution: {integrity: sha512-VXwikqdHgjOVperVVCn2DOe8W3rPIswwZtMHfRYnagpzZo/TOntIjkXPJSfTtl/cFyx5DnCBsDH8ytKGlMeHkw==}
+    engines: {node: '>=18'}
+
+  '@cspell/cspell-types@8.15.5':
+    resolution: {integrity: sha512-bMRq9slD/D0vXckxe9vubG02HXrV4cASo6Ytkaw8rTfxMKpkBgxJWjFWphCFLOCICD71q45fUSg+W5vCp83f/Q==}
     engines: {node: '>=18'}
 
   '@cspell/dict-ada@4.0.2':
@@ -1225,6 +1229,7 @@ packages:
   eslint@8.57.1:
     resolution: {integrity: sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   eslint@9.11.0:
@@ -2645,6 +2650,8 @@ snapshots:
   '@cspell/cspell-service-bus@8.14.4': {}
 
   '@cspell/cspell-types@8.14.4': {}
+
+  '@cspell/cspell-types@8.15.5': {}
 
   '@cspell/dict-ada@4.0.2': {}
 
