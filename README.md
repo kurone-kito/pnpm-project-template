@@ -12,11 +12,41 @@
   - Dependabot
   - GitHub Actions
 
+## how to use this template
+
+You can create a new project by using `degit` or the “Use this template”
+button on GitHub.
+
+```sh
+npx degit kurone-kito/pnpm-project-template my-project
+cd my-project
+pnpm install
+```
+
+### Example settings
+
+#### Monorepo
+
+Add package directories to `pnpm-workspace.yaml`:
+
+```yaml
+packages:
+  - packages/*
+```
+
+#### Non-monorepo
+
+Remove `pnpm-workspace.yaml` if you do not need workspace support.
+
 ## System Requirements
 
 - Node.js: Any of the following versions
   - Iron LTS (`^20.11.x`)
   - Jod LTS or latest (`>=22.x.x`)
+
+Note that this template includes `.node-version`, `.nvmrc`, and
+`.tool-versions` files with specific Node.js versions (`20.19.2`).
+Update these files and this section as needed when you start a new project.
 
 ## Install the dependencies
 
@@ -39,6 +69,7 @@ pnpm run test
 ```
 
 Currently, the command works as an alias for the `pnpm run lint` command.
+Set up your own testing framework and replace this script as needed.
 
 ## Cleaning
 
