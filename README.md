@@ -4,8 +4,7 @@
 
 - PNPM
 - TypeScript
-- ESLint
-- Prettier
+- Biome
 - Commitlint with Husky
 - Visual Studio Code / Vim ready
 - CI configurations
