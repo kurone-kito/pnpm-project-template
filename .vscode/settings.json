@@ -6,8 +6,7 @@
     ".gitattributes": ".gitignore",
     ".markdownlint.*": ".markdownlint-cli2.*",
     ".tool-versions": ".node-version, .nvmrc",
-    "package.json": ".npmrc, pnpm-lock.yaml",
-    "prettier.config.*": ".prettierignore",
+    "package.json": ".npmrc, pnpm-lock.yaml, pnpm-workspace.yaml",
     "tsconfig.json": "*.tsbuildinfo"
   },
   "files.associations": {
@@ -18,7 +17,6 @@
     "**/node_modules/**/*": true
   },
   "files.watcherExclude": {
-    "**/.eslintcache": true,
     "**/node_modules/**/*": true
   },
   "git.branchProtection": ["main"],
@@ -27,11 +25,11 @@
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "yaml.schemas": {
-    "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
-      ".coderabbit.yaml"
-    ],
     "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
       "cspell.config.yml"
+    ],
+    "https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json": [
+      ".coderabbit.yaml"
     ]
   }
 }
