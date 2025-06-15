@@ -17,3 +17,6 @@ Language: **🇬🇧** | [🇯🇵](./CONTRIBUTING.ja.md) | [🇨🇳](./CONTRIB
      We welcome your pull requests.
 4. In this repository, discussion
    **[in English or Japanese](https://translate.google.com/) is recommended**.
+5. Introduce commit message validation at commit time.
+   “**[Conventional Commits](https://www.conventionalcommits.org/)**”
+   rule is applied to discourage committing messages that violate conventions.
