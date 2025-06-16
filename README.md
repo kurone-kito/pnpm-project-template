@@ -23,6 +23,9 @@ cd my-project
 pnpm install
 ```
 
+After generating the project, update `package.json` fields such as `name`
+and `author` so that they reflect your project information.
+
 ### Example settings
 
 #### Monorepo
@@ -42,11 +45,13 @@ Remove `pnpm-workspace.yaml` if you do not need workspace support.
 
 - Node.js: Any of the following versions
   - Iron LTS (`^20.11.x`)
-  - Jod LTS or latest (`>=22.x.x`)
+  - Jod LTS `^22.x.x` or
+  - Latest `>=24.x.x`
 
 Note that this template includes `.node-version`, `.nvmrc`, and
-`.tool-versions` files with specific Node.js versions (`20.19.2`).
-Update these files and this section as needed when you start a new project.
+`.tool-versions` files with specific Node.js versions. These files
+currently list `20.19.2`, so update them and this section as needed when
+you start a new project.
 
 ## Install the dependencies
 
@@ -81,10 +86,6 @@ pnpm run clean
 
 Welcome to contribute to this repository! For more details,
 please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
-
-Introduce commit message validation at commit time.
-The “**[Conventional Commits](https://www.conventionalcommits.org/ja/)**”
-rule is applied to discourage committing messages that violate conventions.
 
 ## LICENSE
 
