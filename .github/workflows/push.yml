@@ -1,8 +1,12 @@
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 name: The CI workflow on push
 on:
   push:
 permissions:
   contents: read
+run-name: Pushed by @${{ github.actor }}
 jobs:
   build:
     defaults:
@@ -35,7 +39,7 @@ jobs:
       - env:
           HUSKY: 0
         name: Install the dependencies
-        run: pnpm i --prefer-frozen-lockfile
+        run: pnpm i --frozen-lockfile
       - name: Run the tests
         run: pnpm run test
     strategy:
