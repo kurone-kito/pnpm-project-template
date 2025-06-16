@@ -45,7 +45,8 @@ Remove `pnpm-workspace.yaml` if you do not need workspace support.
 
 - Node.js: Any of the following versions
   - Iron LTS (`^20.11.x`)
-  - Jod LTS or latest (`>=22.x.x`)
+  - Jod LTS `^22.x.x` or
+  - Latest `>=24.x.x`
 
 Note that this template includes `.node-version`, `.nvmrc`, and
 `.tool-versions` files with specific Node.js versions. These files
