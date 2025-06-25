@@ -89,4 +89,4 @@ please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## LICENSE
 
-MIT
+[MIT](./LICENSE)
