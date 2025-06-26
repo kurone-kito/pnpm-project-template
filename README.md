@@ -50,7 +50,7 @@ Remove `pnpm-workspace.yaml` if you do not need workspace support.
 
 Note that this template includes `.node-version`, `.nvmrc`, and
 `.tool-versions` files with specific Node.js versions. These files
-currently list `20.19.2`, so update them and this section as needed when
+currently list `20.19.3`, so update them and this section as needed when
 you start a new project.
 
 ## Development
