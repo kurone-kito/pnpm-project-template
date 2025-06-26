@@ -17,9 +17,10 @@
     "lint:biome:check": "biome check",
     "lint:biome:fix": "biome check --write",
     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
-    "lint:fix": "pnpm run lint:cspell:check && pnpm run \"/lint:.+:fix/\"",
+    "lint:fix": "pnpm run \"/lint:.+:fix/\"",
     "lint:markdown:check": "markdownlint-cli2 \"**/*.md\"",
     "lint:markdown:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "postlint:fix": "pnpm run lint:cspell:check",
     "prepare": "husky",
     "test": "pnpm run lint"
   },
