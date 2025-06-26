@@ -45,29 +45,37 @@ Remove `pnpm-workspace.yaml` if you do not need workspace support.
 
 - Node.js: Any of the following versions
   - Iron LTS (`^20.11.x`)
-  - Jod LTS `^22.x.x` or
-  - Latest `>=24.x.x`
+  - Jod LTS (`^22.x.x`)
+  - Latest (`>=24.x.x`)
 
 Note that this template includes `.node-version`, `.nvmrc`, and
 `.tool-versions` files with specific Node.js versions. These files
-currently list `20.19.2`, so update them and this section as needed when
+currently list `20.19.3`, so update them and this section as needed when
 you start a new project.
 
-## Install the dependencies
+## Development
+
+### Install the dependencies
 
 ```sh
 corepack enable
 pnpm install
 ```
 
-## Linting
+### Building
+
+```sh
+pnpm run build
+```
+
+### Linting
 
 ```sh
 pnpm run lint
 pnpm run lint:fix # Lint and auto-fix
 ```
 
-## Testing
+### Testing
 
 ```sh
 pnpm run test
@@ -76,17 +84,17 @@ pnpm run test
 Currently, the command works as an alias for the `pnpm run lint` command.
 Set up your own testing framework and replace this script as needed.
 
-## Cleaning
+### Cleaning
 
 ```sh
 pnpm run clean
 ```
 
-## Rules for Development
+## Contributing
 
 Welcome to contribute to this repository! For more details,
 please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## LICENSE
 
-MIT
+[MIT](./LICENSE)
