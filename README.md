@@ -12,7 +12,7 @@
   - Dependabot
   - GitHub Actions
 
-## how to use this template
+## How to use this template
 
 You can create a new project by using `degit` or the “Use this template”
 button on GitHub.
@@ -23,23 +23,22 @@ cd my-project
 pnpm install
 ```
 
-After generating the project, update `package.json` fields such as `name`
-and `author` so that they reflect your project information.
+### Additional configurations
 
-### Example settings
+- Update `package.json` fields:
+  - `name`: The name of your project.
+  - `description`: A brief description of your project.
+  - `author`: Your name or organization.
+  - `license`: The license for your project (default is MIT).
+  - `homepage`: The homepage URL for your project.
+  - `repository`: The repository URL for your project.
+  - `bugs`: The URL for reporting issues.
+- Edit or remove `.github/CODEOWNERS` as needed.
 
-#### Monorepo
+### Usecase
 
-Add package directories to `pnpm-workspace.yaml`:
-
-```yaml
-packages:
-  - packages/*
-```
-
-#### Non-monorepo
-
-Remove `pnpm-workspace.yaml` if you do not need workspace support.
+When you want to create a monorepo project, you should use the
+[pnpm-workspace-template](https://github.com/kurone-kito/pnpm-workspace-template).
 
 ## System Requirements
 
@@ -60,12 +59,6 @@ you start a new project.
 ```sh
 corepack enable
 pnpm install
-```
-
-### Building
-
-```sh
-pnpm run build
 ```
 
 ### Linting
