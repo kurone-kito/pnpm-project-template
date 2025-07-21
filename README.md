@@ -49,7 +49,7 @@ When you want to create a monorepo project, you should use the
 
 Note that this template includes `.node-version`, `.nvmrc`, and
 `.tool-versions` files with specific Node.js versions. These files
-currently list `20.19.3`, so update them and this section as needed when
+currently list `20.19.4`, so update them and this section as needed when
 you start a new project.
 
 ## Development
