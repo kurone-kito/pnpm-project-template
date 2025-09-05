@@ -28,7 +28,7 @@ jobs:
         with:
           run_install: false
       - name: prepare the Node.js version ${{ matrix.node-version }} environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           cache: pnpm
           check-latest: true
