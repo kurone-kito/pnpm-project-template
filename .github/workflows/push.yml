@@ -22,16 +22,13 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.eol lf
       - name: Stages the pushed branch
-        uses: actions/checkout@v4
-      - name: Pre-prepare the Node.js version ${{ matrix.node-version }} environment for the Corepack
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v5
+      - name: Setup the pnpm
+        uses: pnpm/action-setup@v4
         with:
-          check-latest: true
-          node-version: ${{ matrix.node-version }}
-      - name: Enable the corepack
-        run: corepack enable
-      - name: Post-prepare the Node.js version ${{ matrix.node-version }} environment
-        uses: actions/setup-node@v4
+          run_install: false
+      - name: prepare the Node.js version ${{ matrix.node-version }} environment
+        uses: actions/setup-node@v5
         with:
           cache: pnpm
           check-latest: true
