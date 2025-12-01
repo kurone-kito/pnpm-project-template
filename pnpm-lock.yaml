@@ -27,8 +27,8 @@ importers:
         specifier: ^0.20.0
         version: 0.20.0(@commitlint/config-conventional@19.8.1)
       '@kurone-kito/cspell-config':
-        specifier: ^0.20.0
-        version: 0.20.0(cspell@9.2.1)
+        specifier: ^0.21.0
+        version: 0.21.0(cspell@9.2.1)
       '@kurone-kito/lint-staged-config':
         specifier: ^0.20.0
         version: 0.20.0(cspell@9.2.1)(lint-staged@16.1.6)
@@ -438,8 +438,8 @@ packages:
       '@commitlint/config-conventional':
         optional: true
 
-  '@kurone-kito/cspell-config@0.20.0':
-    resolution: {integrity: sha512-vkCZwBxAfxrRozS9CP6X64Em0bcZXKGRmYeKUPP0qop5OISSjSojqUmmHe/NKs1FGkIhpTdT5wXZbMqHizS6pA==}
+  '@kurone-kito/cspell-config@0.21.0':
+    resolution: {integrity: sha512-e5md1IDwmZm0YaDFKhfpjqiByMWY5xIEevfZayup9d6N2gUD2OJ+xMF9yeRxFYqHZFkJPcKXj7LXhBaA1TI+3A==}
     engines: {node: ^20.11 || ^22 || >=24}
     peerDependencies:
       cspell: '*'
@@ -1765,7 +1765,7 @@ snapshots:
     optionalDependencies:
       '@commitlint/config-conventional': 19.8.1
 
-  '@kurone-kito/cspell-config@0.20.0(cspell@9.2.1)':
+  '@kurone-kito/cspell-config@0.21.0(cspell@9.2.1)':
     optionalDependencies:
       cspell: 9.2.1
 
