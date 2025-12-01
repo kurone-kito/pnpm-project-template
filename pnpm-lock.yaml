@@ -30,8 +30,8 @@ importers:
         specifier: ^0.20.0
         version: 0.20.0(cspell@9.2.1)
       '@kurone-kito/lint-staged-config':
-        specifier: ^0.20.0
-        version: 0.20.0(cspell@9.2.1)(lint-staged@16.1.6)
+        specifier: ^0.21.0
+        version: 0.21.0(cspell@9.2.1)(lint-staged@16.1.6)
       '@kurone-kito/markdownlint-config':
         specifier: ^0.20.0
         version: 0.20.0
@@ -447,8 +447,8 @@ packages:
       cspell:
         optional: true
 
-  '@kurone-kito/lint-staged-config@0.20.0':
-    resolution: {integrity: sha512-qpvUP6cAGy/KPE7a+l+53rss2V91THmgZJKIpRelQQUt5K+L1OAAE9Hy+wD0GJ64NcscdTcUHzpFR6NjAG8W+Q==}
+  '@kurone-kito/lint-staged-config@0.21.0':
+    resolution: {integrity: sha512-5Rh9JV+Q5mL3HrB6vEUHjTXQfLzL9dyAqGLd4ckaIFRnC6IlXVZUTSw/tnqLlu5vs1zRX5SStCFc9A00AowMzw==}
     engines: {node: ^20.11 || ^22 || >=24}
     peerDependencies:
       cspell: '>=5.7.x'
@@ -1769,7 +1769,7 @@ snapshots:
     optionalDependencies:
       cspell: 9.2.1
 
-  '@kurone-kito/lint-staged-config@0.20.0(cspell@9.2.1)(lint-staged@16.1.6)':
+  '@kurone-kito/lint-staged-config@0.21.0(cspell@9.2.1)(lint-staged@16.1.6)':
     optionalDependencies:
       cspell: 9.2.1
       lint-staged: 16.1.6
