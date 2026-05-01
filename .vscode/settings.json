@@ -3,7 +3,7 @@
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "*.md": "${capture}.*.md",
-    ".gitattributes": ".gitignore",
+    ".gitattributes": ".gitignore, .gitmessage",
     ".markdownlint.*": ".markdownlint-cli2.*",
     ".tool-versions": ".node-version, .nvmrc",
     "AGENTS.md": "CLAUDE.md, GEMINI.md",
@@ -11,6 +11,7 @@
     "tsconfig.json": "*.tsbuildinfo"
   },
   "files.associations": {
+    ".gitmessage": "git-commit",
     ".imgbotconfig": "json",
     "LICENSE": "plaintext"
   },
