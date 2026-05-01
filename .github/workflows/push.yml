@@ -27,7 +27,7 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-      - name: prepare the Node.js version ${{ matrix.node-version }} environment
+      - name: Prepare the Node.js version ${{ matrix.node-version }} environment
         uses: actions/setup-node@v5
         with:
           cache: pnpm
