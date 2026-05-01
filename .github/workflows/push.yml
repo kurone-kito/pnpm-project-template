@@ -12,8 +12,6 @@ jobs:
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
-    env:
-      COREPACK_INTEGRITY_KEYS: 0
     name: The build process
     runs-on: ${{ matrix.platform.os }}
     steps:
