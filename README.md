@@ -88,6 +88,6 @@ pnpm run clean
 Welcome to contribute to this repository! For more details,
 please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
-## LICENSE
+## License
 
 [MIT](./LICENSE)
