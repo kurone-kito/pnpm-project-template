@@ -51,4 +51,4 @@ jobs:
           - os: windows-latest
             shell: powershell
       fail-fast: false
-    timeout-minutes: 30
+    timeout-minutes: 5
