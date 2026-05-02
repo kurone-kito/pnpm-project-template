@@ -29,11 +29,11 @@
     "test": "pnpm run lint"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.4.15",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@cspell/cspell-types": "^9.2.1",
-    "@kurone-kito/biome-config": "^0.20.0",
+    "@kurone-kito/biome-config": "^0.22.0",
     "@kurone-kito/commitlint-config": "^0.20.0",
     "@kurone-kito/cspell-config": "^0.20.0",
     "@kurone-kito/lint-staged-config": "^0.22.0",
