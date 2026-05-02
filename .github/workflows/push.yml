@@ -38,6 +38,7 @@ jobs:
       - name: Run the tests
         run: pnpm run test
     strategy:
+      fail-fast: false
       matrix:
         node-version:
           - 22.x
@@ -49,5 +50,4 @@ jobs:
             shell: bash
           - os: windows-latest
             shell: powershell
-      fail-fast: false
     timeout-minutes: 5
