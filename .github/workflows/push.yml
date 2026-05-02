@@ -44,8 +44,14 @@ jobs:
           - 22.x
           - 24.x
         platform:
-          - os: ubuntu-latest
+          - os: ubuntu-24.04-arm
             shell: bash
+          - os: ubuntu-slim
+            shell: bash
+          - os: windows-11-arm
+            shell: bash
+          - os: windows-11-arm
+            shell: powershell
           - os: windows-latest
             shell: bash
           - os: windows-latest
