@@ -2,10 +2,16 @@
 
 ## Features
 
+- AI agent guidance with a Copilot-first compatibility layout
+  ([GitHub Copilot canonical guide](.github/copilot-instructions.md),
+  [OpenAI Codex adapter](AGENTS.md),
+  [Claude Code adapter](CLAUDE.md),
+  [strategy notes](docs/ai-strategy.md))
 - PNPM
 - TypeScript
 - Biome
 - Commitlint with Husky
+- [Conventional Commits](https://www.conventionalcommits.org/)
 - Visual Studio Code / Vim ready
 - CI configurations
   - CodeRabbit
@@ -34,6 +40,9 @@ pnpm install
   - `repository`: The repository URL for your project.
   - `bugs`: The URL for reporting issues.
 - Edit or remove `.github/CODEOWNERS` as needed.
+- Review `docs/ai-strategy.md`, then update `AGENTS.md`,
+  `CLAUDE.md`, and `.github/copilot-instructions.md` to reflect your
+  project specifics and preferred tooling order.
 
 ### Usecase
 
@@ -43,13 +52,13 @@ When you want to create a monorepo project, you should use the
 ## System Requirements
 
 - Node.js: Any of the following versions
-  - Iron LTS (`^20.11.x`)
   - Jod LTS (`^22.x.x`)
-  - Latest (`>=24.x.x`)
+  - Krypton LTS (`^24.x.x`)
+  - Latest (`>=25.x.x`)
 
 Note that this template includes `.node-version`, `.nvmrc`, and
 `.tool-versions` files with specific Node.js versions. These files
-currently list `20.19.5`, so update them and this section as needed when
+currently list `22.22.2`, so update them and this section as needed when
 you start a new project.
 
 ## Development
@@ -88,6 +97,6 @@ pnpm run clean
 Welcome to contribute to this repository! For more details,
 please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
-## LICENSE
+## License
 
 [MIT](./LICENSE)

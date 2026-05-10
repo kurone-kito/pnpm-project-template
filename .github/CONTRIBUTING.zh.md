@@ -9,6 +9,10 @@ Language: [🇬🇧](./CONTRIBUTING.md) | [🇯🇵](./CONTRIBUTING.ja.md) | **�
 3. 如果您的想法可以通过**小修复显示，请直接使用[拉取请求](https://github.com/kurone-kito/pnpm-project-template/pulls)**。
    - 本版本库有时会在拉取请求和发布之间建立一对一的绑定关系，但这并**不是必须的**。我们欢迎您的拉取请求。
 4. 在此存储库中，建议**使用[英语或日语](https://translate.google.com/)进行**讨论。
-5. 引入提交时的提交消息验证。适用于
-   “**[约定性提交](https://www.conventionalcommits.org/zh/)**” 规则，
-   以防止违反约定的提交消息。
+5. 本项目遵循
+   [Conventional Commits](https://www.conventionalcommits.org/zh/)。
+   提交时通过 commitlint 进行消息验证。
+   请从用户角度撰写标题行，正文应说明变更的原因（Why）、相关背景（Context）
+   以及具体更改内容（Change），可以使用自然段落或适当的小标题来组织内容。仓库根目录提供了
+   `.gitmessage` 模板。详情请参阅
+   [copilot-instructions.md](./copilot-instructions.md#commit-rules)。

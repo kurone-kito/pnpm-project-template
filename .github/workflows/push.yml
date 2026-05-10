@@ -12,8 +12,6 @@ jobs:
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
-    env:
-      COREPACK_INTEGRITY_KEYS: 0
     name: The build process
     runs-on: ${{ matrix.platform.os }}
     steps:
@@ -22,13 +20,13 @@ jobs:
           git config --global core.autocrlf false
           git config --global core.eol lf
       - name: Stages the pushed branch
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Setup the pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-      - name: prepare the Node.js version ${{ matrix.node-version }} environment
-        uses: actions/setup-node@v5
+      - name: Prepare the Node.js version ${{ matrix.node-version }} environment
+        uses: actions/setup-node@v6
         with:
           cache: pnpm
           check-latest: true
@@ -40,17 +38,24 @@ jobs:
       - name: Run the tests
         run: pnpm run test
     strategy:
+      fail-fast: false
       matrix:
         node-version:
-          - 20.x
           - 22.x
           - 24.x
+          - 25.x
+          - 26.x
         platform:
-          - os: ubuntu-latest
+          - os: ubuntu-24.04-arm
             shell: bash
+          - os: ubuntu-slim
+            shell: bash
+          - os: windows-11-arm
+            shell: bash
+          - os: windows-11-arm
+            shell: powershell
           - os: windows-latest
             shell: bash
           - os: windows-latest
             shell: powershell
-      fail-fast: false
-    timeout-minutes: 30
+    timeout-minutes: 5

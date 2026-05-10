@@ -1,15 +1,18 @@
 {
+  "editor.defaultFormatter": "biomejs.biome",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "*.md": "${capture}.*.md",
-    ".gitattributes": ".gitignore",
+    ".gitattributes": ".gitignore, .gitmessage",
     ".markdownlint.*": ".markdownlint-cli2.*",
     ".tool-versions": ".node-version, .nvmrc",
+    "AGENTS.md": "CLAUDE.md, GEMINI.md",
     "package.json": ".npmrc, pnpm-lock.yaml, pnpm-workspace.yaml",
     "tsconfig.json": "*.tsbuildinfo"
   },
   "files.associations": {
+    ".gitmessage": "git-commit",
     ".imgbotconfig": "json",
     "LICENSE": "plaintext"
   },
@@ -17,19 +20,22 @@
     "**/node_modules/**/*": true
   },
   "files.watcherExclude": {
-    "**/node_modules/**/*": true
+    "**/*.tgz": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.husky/_/**": true,
+    "**/node_modules/**": true,
+    "**/pnpm-lock.yaml.*": true
   },
   "git.branchProtection": ["main"],
-  "search.exclude": {
-    "**/node_modules/**/*": true
+  "material-icon-theme.files.associations": {
+    ".imgbotconfig": "robots"
   },
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "search.exclude": {
+    "**/node_modules/**": true
+  },
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
-      "cspell.config.yml"
-    ],
-    "https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json": [
-      ".coderabbit.yaml"
-    ]
+    "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": ".cspell.config.yml",
+    "https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json": ".coderabbit.yaml"
   }
 }
