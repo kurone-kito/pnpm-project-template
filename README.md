@@ -52,7 +52,7 @@ When you want to create a monorepo project, you should use the
 ## System Requirements
 
 - Node.js: Any of the following versions
-  - Jod LTS (`^22.22.x`)
+  - Jod LTS (`^22.22.2`)
   - Krypton LTS (`^24.x.x`)
   - Latest (`>=25.x.x`)
 
