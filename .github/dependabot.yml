@@ -15,7 +15,7 @@ updates:
       interval: monthly
   - directory: /
     groups:
-      actions-minor:
+      npm-minor:
         patterns:
           - "*"
         update-types:
