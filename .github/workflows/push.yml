@@ -49,10 +49,6 @@ jobs:
             shell: bash
           - os: ubuntu-slim
             shell: bash
-          - os: windows-11-arm
-            shell: bash
-          - os: windows-11-arm
-            shell: powershell
           - os: windows-latest
             shell: bash
           - os: windows-latest
