@@ -12,6 +12,8 @@ jobs:
     defaults:
       run:
         shell: ${{ matrix.platform.shell }}
+    env:
+      PNPM_CONFIG_ENABLE_GLOBAL_VIRTUAL_STORE: 'false'
     name: The build process
     runs-on: ${{ matrix.platform.os }}
     steps:
