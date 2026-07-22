@@ -43,7 +43,6 @@ jobs:
         node-version:
           - 22.x
           - 24.x
-          - 25.x
           - 26.x
         platform:
           - os: ubuntu-24.04-arm
