@@ -5,5 +5,11 @@ engineStrict: true
 gitChecks: false
 ignoreWorkspaceRootCheck: true
 linkWorkspacePackages: true
+minimumReleaseAgeExclude:
+  - '@kurone-kito/biome-config@0.23.0'
+  - '@kurone-kito/commitlint-config@0.23.0'
+  - '@kurone-kito/cspell-config@0.23.0'
+  - '@kurone-kito/lint-staged-config@0.23.0'
+  - '@kurone-kito/markdownlint-config@0.23.0'
 pmOnFail: warn
 shellEmulator: true
