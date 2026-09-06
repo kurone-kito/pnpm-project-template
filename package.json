@@ -37,10 +37,10 @@
     "@kurone-kito/cspell-config": "^0.23.0",
     "@kurone-kito/lint-staged-config": "^0.23.0",
     "@kurone-kito/markdownlint-config": "^0.23.0",
-    "@kurone-kito/typescript-config": "^0.22.0-alpha.9",
+    "@kurone-kito/typescript-config": "^0.22.0",
     "cspell": "^10.2.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.4.1",
+    "lint-staged": "^17.5.0",
     "markdownlint-cli2": "^0.23.2",
     "rimraf": "^6.1.3",
     "typescript": "~7.0.2"
