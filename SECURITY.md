@@ -19,10 +19,12 @@ report it through
 [GitHub Security Advisories](https://github.com/kurone-kito/pnpm-project-template/security/advisories/new)
 so the issue can be addressed privately before public disclosure.
 
-If you are unable to use Security Advisories, you may alternatively
+If you cannot use Security Advisories, please avoid posting exploit or
+impact details in a public issue or pull request. Instead,
 [open an issue](https://github.com/kurone-kito/pnpm-project-template/issues)
-with the “security” label or submit a
-[pull request with a fix](https://github.com/kurone-kito/pnpm-project-template/pulls).
+that only states a security report is pending and ask a maintainer to
+reach out, or contact the maintainer directly using the address in
+[CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md).
 
 Your contributions to improving the security of this project are greatly
 appreciated.
