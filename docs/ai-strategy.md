@@ -3,7 +3,7 @@
 This repository's day-to-day AI work now centers on Claude Code, with
 other harnesses (Codex CLI, GitHub Copilot, Gemini CLI, and similar
 tools) available as fallbacks when Claude Code is unavailable. The
-AI-instruction layout follows that harness mix -- see "Canonical
+AI-instruction layout follows that harness mix — see "Canonical
 guidance" below for which of those actually read `AGENTS.md`
 directly versus needing an adapter.
 
@@ -53,8 +53,9 @@ full onboarding checklist is maintained in `AGENTS.md` § Onboarding.
 - Treat this file as a human-facing strategy note, not as the primary
   instruction file for any agent.
 - When updating AI guidance, review `AGENTS.md` first, then `CLAUDE.md`,
-  `GEMINI.md`, `.github/copilot-instructions.md`, and `README.md` for
-  anything that references it.
+  `GEMINI.md`, `.github/copilot-instructions.md`, `README.md`, and the
+  `.github/CONTRIBUTING*.md` family (which link directly into
+  `AGENTS.md`'s section anchors) for anything that references it.
 
 ## History
 

@@ -209,10 +209,10 @@ Refs #42
 feat!: require node 20 as minimum version
 
 Node 18 reached end-of-life in April 2025 and no longer
-receives security updates, while the project now standardizes
-on the active Node 20 LTS baseline. All production
-environments have already been upgraded to node 20+, so
-update the engines field and CI matrix to require node >= 20.
+receives security updates. This example assumes a project
+standardizing on the Node 20 LTS baseline at the time -- check
+this repository's own package.json engines field for its
+actual current floor, since it moves on independently.
 
 BREAKING CHANGE: drop support for node 16 and 18. Users
 must upgrade to node 20 or later.
@@ -359,7 +359,9 @@ When proposing onboarding, suggest customizing the following areas
 in a single plan:
 
 1. **Project description** — update `README.md` and the opening
-   lines of AI instruction files to reflect the project's purpose
+   lines of this file (the canonical AI instruction source) to reflect
+   the project's purpose; the adapters in item 6 below rarely need a
+   matching edit
 2. **Framework / toolchain** — identify the primary framework;
    add relevant build tooling and type definitions
 3. **Dependency management** — configure workspace structure and
