@@ -258,6 +258,26 @@ $RECYCLE.BIN/
 
 ### THE PROJECT SPECIFIES #################################################
 
+### AI Agents ###
+# Claude Code local config (settings.local.json, cache, etc.) stays
+# local-only, but project-shared resources under .claude/skills,
+# .claude/agents, .claude/commands, and the curated .claude/settings.json
+# permission baseline ship with the repository. Uses the same
+# wildcard-plus-negation shape as .vscode/* above -- a trailing-slash
+# whole-directory exclude would make later "!" re-includes inert.
+.claude/*
+!.claude/settings.json
+!.claude/skills/
+!.claude/agents/
+!.claude/commands/
+
+# OpenAI Codex sandbox
+.codex/
+
+### NeoVim ###
+# Project-local NeoVim config
+.nvim.lua
+
 ### Node ###
 # pnpm
 pnpm-lock.yaml.*
