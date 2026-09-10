@@ -1,19 +1,22 @@
 # AI tooling strategy
 
 This repository's day-to-day AI work now centers on Claude Code, with
-other AGENTS.md-aware harnesses (Codex CLI, GitHub Copilot, Gemini CLI,
-and similar tools) available as fallbacks when Claude Code is
-unavailable. The AI-instruction layout follows that harness mix.
+other harnesses (Codex CLI, GitHub Copilot, Gemini CLI, and similar
+tools) available as fallbacks when Claude Code is unavailable. The
+AI-instruction layout follows that harness mix -- see "Canonical
+guidance" below for which of those actually read `AGENTS.md`
+directly versus needing an adapter.
 
 ## Canonical guidance
 
 - [AGENTS.md](../AGENTS.md) is the canonical, fully detailed AI guide.
   It follows the [AGENTS.md](https://agents.md) convention —
   a vendor-neutral standard now stewarded by the Linux Foundation's Agentic
-  AI Foundation — that most agent tools discover automatically at the
-  repository root, including OpenAI Codex, GitHub Copilot (CLI, coding
-  agent, and Chat), xAI Grok Build, and Google Antigravity. Keep new
-  guidance here first.
+  AI Foundation — that a growing set of agent tools discover
+  automatically at the repository root, OpenAI Codex and GitHub
+  Copilot (CLI, coding agent, and Chat) confirmed among them. Check
+  each tool's own documentation for its current level of support,
+  since this keeps changing. Keep new guidance here first.
 - [CLAUDE.md](../CLAUDE.md) and [GEMINI.md](../GEMINI.md) are thin adapters
   for the two tools that do not read `AGENTS.md` by default (Claude Code,
   and Gemini CLI unless a user has opted into `AGENTS.md` in their own

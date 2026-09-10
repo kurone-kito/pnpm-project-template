@@ -40,8 +40,11 @@ through a pull request.
 ### Rules
 
 - **Never push directly to `main`** — all changes must go through a pull
-  request, even though branch protection is not currently configured on
-  GitHub to enforce this.
+  request. GitHub enforces this via a repository ruleset targeting
+  `main` (`non_fast_forward`, `deletion`, and `pull_request` rules) —
+  check `gh api repos/<owner>/<repo>/rulesets`, not the legacy
+  `branches/main/protection` endpoint, which does not cover rulesets
+  and returns 404 even when one is active.
 - **Rebase onto `main`** — when a feature branch needs the latest `main`,
   always rebase. Fetch first so the local `main` is not stale,
   e.g. `git fetch origin && git rebase origin/main`
@@ -54,7 +57,10 @@ through a pull request.
   repository settings).
 - **fixup + autosquash for in-branch fixes** — when a later commit in a
   feature branch fixes an earlier one, prefer `git commit --fixup=<sha>`
-  followed by `git rebase -i --autosquash` to fold the fix into its target.
+  followed by `git rebase -i --autosquash main` (name the base branch
+  explicitly; without it, a branch with no tracking information fails
+  outright, and one already in sync with its upstream silently no-ops
+  instead of folding the fixup commit) to fold the fix into its target.
 - **Avoid giant commits** — if squashing would produce an unreasonably
   large commit, keep the fix commit separate or re-split the history so
   each commit remains reviewable.

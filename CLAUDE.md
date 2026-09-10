@@ -7,6 +7,7 @@ in this file.
 
 @AGENTS.md
 
-Claude Code's own Plan Mode already implements the imported
-guidance to pause and ask when a step is risky or uncertain, so no
+Claude Code already follows the imported guidance to pause and ask
+when a step is risky or uncertain as part of its normal interaction
+style, without needing the user to switch into Plan Mode first, so no
 further translation is needed here.
