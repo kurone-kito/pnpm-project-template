@@ -271,12 +271,18 @@ $RECYCLE.BIN/
 !.claude/agents/
 !.claude/commands/
 
+# Claude Code personal memory file (outside .claude/, so the pattern
+# above does not cover it)
+CLAUDE.local.md
+
 # OpenAI Codex sandbox
 .codex/
 
 ### NeoVim ###
-# Project-local NeoVim config
+# Project-local NeoVim config, loaded via the opt-in 'exrc' option
 .nvim.lua
+.nvimrc
+.exrc
 
 ### Node ###
 # pnpm
