@@ -40,7 +40,8 @@ through a pull request.
 ### Rules
 
 - **Never push directly to `main`** — all changes must go through a pull
-  request. Branch protection is enforced on GitHub.
+  request, even though branch protection is not currently configured on
+  GitHub to enforce this.
 - **Rebase onto `main`** — when a feature branch needs the latest `main`,
   always rebase. Fetch first so the local `main` is not stale,
   e.g. `git fetch origin && git rebase origin/main`

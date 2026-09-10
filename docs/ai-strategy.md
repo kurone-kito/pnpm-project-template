@@ -1,9 +1,9 @@
 # AI tooling strategy
 
-This repository's day-to-day AI work now centers on Claude Code,
-with Codex CLI, xAI Grok Build, GitHub Copilot CLI, and Google Antigravity
-used as fallbacks when Claude Code is unavailable. The AI-instruction
-layout follows that harness mix.
+This repository's day-to-day AI work now centers on Claude Code, with
+other AGENTS.md-aware harnesses (Codex CLI, GitHub Copilot, Gemini CLI,
+and similar tools) available as fallbacks when Claude Code is
+unavailable. The AI-instruction layout follows that harness mix.
 
 ## Canonical guidance
 
