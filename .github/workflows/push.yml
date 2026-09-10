@@ -1,9 +1,12 @@
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
-name: The CI workflow on push
+name: The CI workflow
 on:
+  pull_request:
   push:
+    branches:
+      - main
 permissions:
   contents: read
 run-name: Pushed by @${{ github.actor }}
