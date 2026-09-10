@@ -267,9 +267,9 @@ $RECYCLE.BIN/
 # whole-directory exclude would make later "!" re-includes inert.
 .claude/*
 !.claude/settings.json
-!.claude/skills/
-!.claude/agents/
-!.claude/commands/
+!.claude/skills
+!.claude/agents
+!.claude/commands
 
 # Claude Code personal memory file (outside .claude/, so the pattern
 # above does not cover it)
