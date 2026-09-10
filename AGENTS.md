@@ -202,10 +202,11 @@ Refs #42
 ```txt
 feat!: require node 20 as minimum version
 
-Node 18 reaches end-of-life and lacks native fetch support
-used by the new HTTP client. All production environments
-have already been upgraded to node 20+, so update the
-engines field and CI matrix to require node >= 20.
+Node 18 reached end-of-life in April 2025 and no longer
+receives security updates, while the project now standardizes
+on the active Node 20 LTS baseline. All production
+environments have already been upgraded to node 20+, so
+update the engines field and CI matrix to require node >= 20.
 
 BREAKING CHANGE: drop support for node 16 and 18. Users
 must upgrade to node 20 or later.
