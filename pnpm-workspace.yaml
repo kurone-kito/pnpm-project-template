@@ -38,7 +38,6 @@ minimumReleaseAgeExclude:
   - cspell@10.3.3
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeStrict: true
-pmOnFail: warn
 shellEmulator: true
 update:
   changeset: true
