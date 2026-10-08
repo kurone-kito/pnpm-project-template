@@ -1,19 +1,9 @@
 configDependencies:
-  '@pnpm/plugin-types-fixer': 0.1.0+sha512-bLww63gRHi7siYTqFJb5qNdcXadU0jv20Et6z5AryMZ7FlLolbEJOrXLpg8+amQZNHHNW1dfFUBGVw/9ezQbFg==
+  "@pnpm/plugin-types-fixer": 0.1.0+sha512-bLww63gRHi7siYTqFJb5qNdcXadU0jv20Et6z5AryMZ7FlLolbEJOrXLpg8+amQZNHHNW1dfFUBGVw/9ezQbFg==
 engineStrict: true
 gitChecks: false
 ignoreWorkspaceRootCheck: true
 linkWorkspacePackages: true
-minimumReleaseAgeExclude:
-  - '@biomejs/biome@2.5.14'
-  - '@biomejs/cli-darwin-arm64@2.5.14'
-  - '@biomejs/cli-darwin-x64@2.5.14'
-  - '@biomejs/cli-linux-arm64-musl@2.5.14'
-  - '@biomejs/cli-linux-arm64@2.5.14'
-  - '@biomejs/cli-linux-x64-musl@2.5.14'
-  - '@biomejs/cli-linux-x64@2.5.14'
-  - '@biomejs/cli-win32-arm64@2.5.14'
-  - '@biomejs/cli-win32-x64@2.5.14'
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeStrict: true
 shellEmulator: true
